@@ -6,8 +6,8 @@ const SocialSidebar = dynamic(() => import('@/components/SocialSidebar'), { ssr:
 const CustomCursor = dynamic(() => import('@/components/CustomCursor'), { ssr: false })
 
 export const metadata: Metadata = {
-  title: 'Your Name | Web Developer & Designer',
-  description: 'Portfolio of a creative web developer and designer',
+  title: 'Pranay Wanjari | Web Developer & Designer',
+  description: 'Portfolio of Pranay Wanjari — Web Developer and Designer based in Nagpur, India',
 }
 
 export default function RootLayout({
