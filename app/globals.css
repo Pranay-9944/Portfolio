@@ -1,0 +1,175 @@
+/* REPLACE font import with: */
+/* REPLACE: */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan: #00f5ff;
+  --cyan-dim: #00c8d422;
+  --purple: #a855f7;
+  --dark: #050810;
+  --dark2: #0a0f1e;
+  --dark3: #0d1425;
+  --card: #0f172a;
+  --border: #1e293b;
+  --text: #e2e8f0;
+  --muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* REPLACE: */
+/* REPLACE: */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: ' serif', monospace;
+}
+
+/* WITH: */
+body {
+  background-color: var(--dark);
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Share Tech Mono', monospace;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-attachment: fixed;   /* ← grid stays fixed, doesn't move */
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+.cyber-btn {
+  position: relative;
+  padding: 14px 36px;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cyber-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.cyber-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.cyber-btn:hover {
+  color: var(--dark);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.4);
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  border-radius: 2px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  border-radius: 99px;
+  letter-spacing: 0.5px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(0, 245, 255, 0.4);
+}
+
+.cyber-input {
+  width: 100%;
+  background: var(--dark2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cyber-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+}
+
+.cyber-input::placeholder {
+  color: var(--muted);
+}
+
+/* Smooth scroll animation support */
+section {
+  will-change: transform, opacity;
+}
