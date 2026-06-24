@@ -52,7 +52,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it.
+Open [http://localhost:3000](https://pranayportfolio-gamma.vercel.app/) to view it.
 
 ### 3. Customize
 
